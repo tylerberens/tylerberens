@@ -1,0 +1,33 @@
+#home {
+  padding-top: 20vh;
+  position: relative;
+  min-height: 90vh;
+  h1 {
+    font-size: 4em;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 2.5em;
+    color: var(--g);
+    font-weight: 600;
+  }
+  button {
+    margin-top: 20px;
+    background: transparent;
+    border: solid 3px #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    padding: 8px 24px;
+  }
+  h3 {
+    color: var(--b);
+    font-size: 2em;
+  }
+}
+#content {
+  min-height: 60vh;
+  background: #161616;
+}

@@ -1,0 +1,21 @@
+div#work {
+  padding-top: 8vw;
+  position: relative;
+  h1 {
+    font-size: 6em;
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  h2 {
+    color: var(--g);
+    padding: 25px;
+  }
+  .employers {
+    margin-top: 100px;
+  }
+  .employer {
+    margin-top: 50px;
+  }
+}
