@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+
+export class logo extends Component {
+    render() {
+        return (
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="140" viewBox="0 0 246 116.575">
+                    <g id="Group_36" data-name="Group 36" transform="translate(-279 -28)">
+                        <text id="tyler" transform="translate(327 106)" fill="#fff" stroke="#fff" stroke-width="3" font-size="74" font-family="AdobeHandwriting-Frank, Adobe Handwriting Frank"><tspan x="0" y="0">tyler</tspan></text>
+                        <path id="Polygon_1" data-name="Polygon 1" d="M28,0,56,48H0Z" transform="translate(279 117) rotate(-90)" fill="#00ff80"/>
+                        <path id="Path_33" data-name="Path 33" d="M4186,168c-5.566,12.65,9.107,12.144,9.107,12.144l39.1-97.051s-7.729-12.243-10.766-6.171S4191.562,155.349,4186,168Z" transform="translate(-3743.478 -35.57)" fill="#707070"/>
+                        <g id="Polygon_2" data-name="Polygon 2" transform="translate(525 61) rotate(90)" fill="none">
+                        <path d="M28,0,56,49H0Z" stroke="none"/>
+                        <path d="M 28 12.0933837890625 L 10.33907699584961 43 L 45.66092300415039 43 L 28 12.0933837890625 M 28 0 L 56 49 L 0 49 L 28 0 Z" stroke="none" fill="#00e5ff"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        );
+    }
+}
+
+export default logo;

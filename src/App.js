@@ -3,6 +3,8 @@ import "./App.css";
 import Home from "./app/home/home";
 import Nav from "./app/nav/nav";
 import Work from "./app/work/work";
+import Blog from "./app/blog/blog";
+import Resume from "./app/resume/resume";
 //page router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -14,6 +16,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/work" component={Work} />
+          <Route path="/blog" component={Blog} />
+          <Route path="/resume" component={Resume} />
         </Switch>
       </div>
     </Router>

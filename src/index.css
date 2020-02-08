@@ -9,6 +9,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a0a0a !important;
 }
+body, html{
+  overflow:auto;
+  overflow-x: hidden !important;
+}
 .c {
   font-family: "Caveat", cursive;
 }
@@ -23,4 +27,5 @@ code {
   --r: #ff0000;
   --p: #ee00ff;
   --gr: #707070;
+  --w: #fff;
 }

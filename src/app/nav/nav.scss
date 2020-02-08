@@ -1,17 +1,27 @@
 #nav {
-  right: 10vw;
-  position: absolute;
+  position:absolute;
   z-index: 999999;
-}
-#nav li {
-  list-style: none;
-  color: var(--gr);
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 20px 20px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-#nav li.active {
-  color: var(--g);
+  display:block;
+  width:100%;
+
+  .col-9 a {
+    list-style: none;
+    color: var(--w);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
+  }
+  a:hover{
+    text-decoration: none;
+    color: var(--b);
+    border-radius: 3px;
+  }
+  .col-9 a.active {
+    color: var(--g);
+    background-color: transparent !important;
+  }
 }

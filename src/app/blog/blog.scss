@@ -1,0 +1,104 @@
+div#blog {
+    position: relative;
+    min-height: 150vh;
+    padding-top:22vh;
+    h1 {
+      font-size: 4.5em;
+      font-weight: 700;
+      color: #fff;
+      text-align: left;
+      padding-left:5vw;
+      margin-bottom: 0;
+    }
+    h2 {
+      color: var(--g);
+      padding: 25px;
+    }
+    .employers {
+      margin-top: 100px;
+    }
+    .employer {
+      margin-top: 50px;
+    }
+  }
+  #blogHeader{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 85vh;
+    background-image: url("./blog.jpg");
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  #filter{
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  #bottomLayer{
+    position:absolute;
+    bottom: 64vh;
+  }
+  a.line1{
+    background: var(--y);
+    display:block;
+    width:600px;
+    max-width:60vw;
+    list-style:none;
+    padding:8px 70px;
+    margin-top:3vw;
+    color: rgba(0, 0, 0, 1) !important;
+    transform:rotate(-12deg);
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
+  }
+  a.line1:hover{
+    text-decoration:none;
+    width:590px;
+    background: #b3d503;
+  }
+  a.line2{
+    background: var(--y);
+    display:block;
+    width:425px;
+    max-width:45vw;
+    padding:8px 70px;
+    margin-top: 25px;
+    color: rgba(0, 0, 0, 0.5) !important;
+    transform:rotate(-12deg)
+  }
+  div#sidelinks {
+    margin-top: 9vh;
+    position: absolute;
+    left: 0px;
+    margin-left:-35px;
+  }
+  
+  @media (max-width: 762px){
+    a.line1{
+      background: var(--y);
+      display:block;
+      width:600px;
+      max-width: 85vw;
+      list-style:none;
+      padding:8px 70px;
+      margin-top: 50px;
+      color: rgba(0, 0, 0, 1) !important;
+      transform:rotate(-12deg);
+      transition: .2s ease;
+      -webkit-transition: .2s ease;
+    }
+    a.line2{
+      background: var(--y);
+      display:block;
+      width:425px;
+      max-width:65vw;
+      padding:8px 70px;
+      margin-top: 15px;
+      color: rgba(0, 0, 0, 0.5) !important;
+      transform:rotate(-12deg)
+    }
+  }

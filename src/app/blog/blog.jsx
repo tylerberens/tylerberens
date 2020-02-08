@@ -1,24 +1,24 @@
 import React, { Component } from "react";
-import "./work.scss";
+import "./blog.scss";
 import Header from './header';
 import { Link } from "react-router-dom";
 
-export class work extends Component {
+export class blog extends Component {
   render() {
     return (
-      <div id="work">
+      <div id="blog">
         <div>
           <Header />
           <div id="sidelinks">
             <Link to="/" className="line1">
                     <li>Home</li>
             </Link>
-            <a className="line2">Work</a>
+            <a className="line2">Blog</a>
           </div>
           <div className="container-fluid">
             <div className="row">
               <div className="col-12">
-                <h1>work</h1>
+                <h1>blog</h1>
               </div>
             </div>
           </div>
@@ -28,4 +28,4 @@ export class work extends Component {
   }
 }
 
-export default work;
+export default blog;
