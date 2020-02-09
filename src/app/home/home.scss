@@ -2,7 +2,8 @@
   padding-top: 20vh;
   position: relative;
   min-height: 90vh;
-  text-align:center;
+  text-align: center;
+  z-index: 0;
   h1 {
     font-size: 4em;
     font-weight: 900;
@@ -14,7 +15,8 @@
     color: var(--g);
     font-weight: 600;
   }
-  button {
+  .seeMyWork {
+    display: inline-block;
     margin-top: 20px;
     background: transparent;
     border: solid 3px #fff;
@@ -22,6 +24,14 @@
     font-weight: 700;
     color: #fff;
     padding: 8px 24px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+  }
+  .seeMyWork:hover,
+  .seeMyWork:focus {
+    text-decoration: none;
+    border-color: #f1f1f1;
+    box-shadow: 0px 6px 20px #404040;
   }
   h3 {
     color: var(--b);

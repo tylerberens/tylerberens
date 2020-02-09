@@ -1,22 +1,65 @@
 #nav {
-  position:absolute;
+  position: absolute;
   z-index: 999999;
-  display:block;
-  width:100%;
-
+  display: block;
+  width: 100%;
+  padding-bottom: 0 !important;
+}
+.logo {
+  z-index: 1;
+}
+#mobileBackdrop {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.navbar-toggler {
+  border: none !important;
+  position: fixed !important;
+  z-index: 9999999999999;
+  bottom: 40px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.64) !important;
+  border-radius: 100% !important;
+  height: 80px;
+  padding: 22px !important;
+}
+.navbar-collapse .nav-item {
+  z-index: 1;
+}
+#backdrop {
+  background: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+button.navbar-toggler div {
+  border: solid 2px var(--g);
+  width: 37px;
+  margin-top: 7px;
+}
+button.navbar-toggler div:first-child {
+  margin-top: 0px;
+}
+@media (min-width: 992px) {
   .nav-item a {
     list-style: none;
-    font-size:1.5em;
+    font-size: 1.2em;
     color: var(--w);
     text-transform: uppercase;
     display: inline-block;
     padding: 20px 20px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 1px;
-    transition: .2s ease;
-    -webkit-transition: .2s ease;
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
   }
-  a:hover{
+  .nav-item a:hover {
     text-decoration: none;
     color: var(--b);
     border-radius: 3px;
@@ -25,51 +68,49 @@
     color: var(--g);
     background-color: transparent !important;
   }
+  #backdrop {
+    display: none;
+  }
 }
-#mobileBackdrop{
-  position: fixed;
-  bottom:0;
-  left:0;
-}
-.navbar-toggler{
-  border:none !important;
-  position:fixed !important;
-  z-index: 9999999999999;
-  bottom:40px;
-  right:20px;
-  background: rgba(0, 0, 0, 0.64) !important;
-  border-radius: 100% !important;
-  height: 80px;
-  padding: 22px !important;
-}
-.navbar-collapse .nav-item{
-  z-index:1;
-}
-#backdrop{
-  background: rgba(0,0,0,.9);
-  position:fixed;
-  top:0;
-  left:0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 0;
-  opacity:1;
-  transition: all .3s ease;
-}
-#navbarButton.fadeDown{
-  margin-top: 20px;
-  transition-delay: .6s;
-  transition: all .6s ease;
-}
-.offScreen, .offScreen #backdrop{
-  opacity:0;
-  transition: all .6s ease;
-}
-button.navbar-toggler div{
-  border: solid 2px var(--g);
-  width:37px;
-  margin-top: 7px;
-}
-button.navbar-toggler div:first-child{
-margin-top:0px;
+@media (max-width: 991px) {
+  .nav-item a {
+    list-style: none;
+    font-size: 1.5em;
+    color: var(--w);
+    text-transform: uppercase;
+    display: block;
+    padding: 20px 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+  }
+  .nav-item a:hover {
+    text-decoration: none;
+    color: var(--b);
+    border-radius: 3px;
+  }
+  .nav-item a.active {
+    color: var(--g);
+    background-color: transparent !important;
+  }
+  .offScreen,
+  .offScreen #backdrop {
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  .offScreen,
+  .offScreen * {
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    padding: 0 !important;
+  }
+  #navbarButton.offScreen #backdrop {
+    display: none;
+  }
+  #navbarButton.fadeDown {
+    margin-top: 20px;
+    transition-delay: 0.6s;
+    transition: all 0.6s ease;
+  }
 }
