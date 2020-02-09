@@ -18,10 +18,10 @@ export class layer3 extends Component {
               y2="1"
               gradientUnits="objectBoundingBox"
             >
-              <stop offset="0" stop-color="#171717" />
-              <stop offset="0.163" stop-color="#151515" />
+              <stop offset="0" stopColor="#171717" />
+              <stop offset="0.163" stopColor="#151515" />
               <stop offset="0.749" />
-              <stop offset="1" stop-color="#0b0b0b" />
+              <stop offset="1" stopColor="#0b0b0b" />
             </linearGradient>
           </defs>
           <path
