@@ -1,7 +1,4 @@
 div#work {
-  position: relative;
-  min-height: 150vh;
-  padding-top:22vh;
   h1 {
     font-size: 4.5em;
     font-weight: 700;
@@ -21,6 +18,11 @@ div#work {
     margin-top: 50px;
   }
 }
+#headerContainer {
+  display: block;
+  height: 85vh;
+  padding-top: 22vh;
+}
 #workHeader{
   position: absolute;
   top: 0;
@@ -37,10 +39,6 @@ div#work {
   position: absolute;
   top: 0;
   width: 100%;
-}
-#bottomLayer{
-  position:absolute;
-  bottom: 64vh;
 }
 a.line1{
   background: var(--y);
@@ -60,7 +58,7 @@ a.line1:hover{
   width:590px;
   background: #b3d503;
 }
-a.line2{
+li.line2{
   background: var(--y);
   display:block;
   width:425px;
@@ -101,4 +99,59 @@ div#sidelinks {
     color: rgba(0, 0, 0, 0.5) !important;
     transform:rotate(-12deg)
   }
+}
+.chicken1{
+  position: absolute;
+  z-index: -2;
+  margin-top: -150px;
+  left: -25px;
+}
+.chicken2{
+  position: absolute;
+  z-index: -2;
+  left: -25px;
+}
+#templates{
+  display: block;
+  margin-top: 20vh;
+}
+#work h3{
+  color: var(--g);
+  margin-top:75px;
+  margin-bottom:30px;
+}
+#work h4{
+  color: var(--gr);
+  font-size:16px;
+  margin-top:15px;
+}
+.card1{
+  margin-top:-75px;
+  margin-left: -75px;
+}
+.cards img{
+  height: 400px;
+  position:absolute;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+}
+.cards img:hover,
+.cards img:focus{
+    z-index:1;
+    transform:scale(1.2);
+}
+.card3{
+  margin-left: 75px;
+  margin-top:75px;
+}
+.card4{
+  margin-left: 150px;
+  margin-top: 150px;
+}
+.cards{
+  min-height:600px;
+}
+#bottomLayer{
+  position:absolute;
+  bottom: 15vh !important;
 }

@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a0a0a !important;
 }
-body, html{
+body, html, #root, .App{
   overflow:auto;
   overflow-x: hidden !important;
 }

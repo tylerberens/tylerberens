@@ -8,15 +8,15 @@ export class nav extends Component {
     super(props);
     this.state = {
       x: false,
-      top: true
+      top: true,
     };
 
     this.toggleNavClick = this.toggleNavClick.bind(this);
   }
 
   toggleNavClick() {
-    this.setState(state => ({
-      x: !state.x
+    this.setState(() => ({
+      x: !this.state.x
     }));
   }
   componentDidMount() {
@@ -27,21 +27,20 @@ export class nav extends Component {
   }
   handleScroll = () => {
     if ((window.scrollY = 0)) {
-      this.setState({ top: true });
-    } else if (window.scrollY > 100) {
-      this.setState({ top: false });
-      console.log(window.scrollY);
+      this.setState({ top: !this.state.top});
+    }
+  };
+  scrollTop() {
+    var scrollPos = window.scrollY;
+    if(scrollPos === 0){
+      return "Top";
     }
   };
   render() {
     return (
       <nav
         id="nav"
-        className={`navbar navbar-dark navbar-expand-lg offset-xl-1 col-xl-10 p-4 ${(this.state.top = true
-          ? "top"
-          : "not")}`}
-        role="navigation"
-      >
+        className={`navbar navbar-dark navbar-expand-lg offset-xl-1 col-xl-10 p-4 ${scrollTop()} `} role="navigation">
         <div className="container-fluid">
           <Link to="/" className="logo">
             <Logo />
