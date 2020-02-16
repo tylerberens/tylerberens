@@ -4,6 +4,16 @@
   display: block;
   width: 100%;
   padding-bottom: 0 !important;
+  transition: all .1s;
+  -webkit-transition: all .1s;
+}
+nav#nav.fixed {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: solid 1px #1d1d1d;
+  .logo{
+    transform:scale(.8);
+  }
 }
 .logo {
   z-index: 1;
@@ -14,15 +24,25 @@
   left: 0;
 }
 .navbar-toggler {
+  touch-action: manipulation;
   border: none !important;
   position: fixed !important;
   z-index: 9999999999999;
   bottom: 40px;
-  right: 20px;
   background: rgba(0, 0, 0, 0.64) !important;
   border-radius: 100% !important;
   height: 80px;
   padding: 22px !important;
+  transition: all 0.5s ease;
+}
+.navbar-toggler.alternate div{
+  border-color: var(--dgr);
+}
+.navbar-toggler-true{
+  right: 20px;
+}
+.navbar-toggler-false{
+  left: 20px;
 }
 .navbar-collapse .nav-item {
   z-index: 1;
@@ -79,6 +99,8 @@ button.navbar-toggler div:first-child {
     color: var(--w);
     text-transform: uppercase;
     display: block;
+    background: var(--bl);
+    margin-bottom:5px;
     padding: 20px 20px;
     font-weight: 700;
     letter-spacing: 1px;

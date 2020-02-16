@@ -2,12 +2,20 @@ import React, { Component } from "react";
 import "./work.scss";
 import Header from './header';
 import { Link } from "react-router-dom";
-import  cwc  from "./mycentral.png";
-import  tlc  from "./tlc.PNG";
-import  ofv  from "./over.PNG";
-import  lr  from "./myla.PNG";
 
 export class work extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      background: "cwc"
+    };
+    this.toggleBackground = this.toggleBackground.bind(this);
+  }
+  toggleBackground() {
+    this.setState(() => ({
+      background: this.state.background
+    }));
+  }
   render() {
     return (
       <React.Fragment>
@@ -34,17 +42,25 @@ export class work extends Component {
                       </svg>
                   </div>
                   <div className="cards col-md-12 col-lg-6">
-                      <img alt="" className="card1" src={cwc} />
-                      <img alt="" className="card2" src={tlc} />
-                      <img alt="" className="card3" src={lr} />
-                      <img alt="" className="card4" src={ofv} />
+                    <div className="hover2">
+                      <div className="blank-iphone"></div>
+                    </div>
+                    <div className="hover">
+                      <div className="iphone"></div>
+                    </div>
                   </div>
-                  <div className="text-right col-md-12 col-lg-6">
-                      <h3>Matching Templates</h3>
+                  <div className="match text-right col-md-12 col-lg-5">
+                      <h3 className="c">Matching Templates</h3>
                       <h4>Built ASP.NET templates to match existing websites</h4>
                       <h4>Custom featured side navigation</h4>
                       <h4>Redesigned UI of many tools</h4>
-                      <h4>Included multiple color</h4>
+                      <h4>Included multiple color themes</h4>
+                      {/* <div id="cardButtons">
+                          <button className="btn btn-primary btn-block" onClick={() => this.setState({background: "cwc"})}>Central Wesleyan Church</button>
+                          <button className="btn btn-primary btn-block" onClick={() => this.setState({background: "tlc"})}>The Local Church</button>
+                          <button className="btn btn-primary btn-block" onClick={() => this.setState({background: "over"})}>Overflow Church</button>
+                          <button className="btn btn-primary btn-block" onClick={() => this.setState({background: "lr"})}>La Roca</button>
+                      </div> */}
                   </div>
             </div>
           </div>
@@ -56,7 +72,12 @@ export class work extends Component {
                         </svg>
                     </div>
                     <div className="text-left col-md-12 col-lg-6">
-                      <h3>Pathfinder Visualization</h3>
+                      <h3 className="c">Pathfinder Visualization</h3>
+                      <h4>What did I learn</h4>
+                      <h4>What did I learn</h4>
+                      <h4>What did I learn</h4>
+                      <h4>What did I learn</h4>
+                      <h4>What did I learn</h4>
                       <h4>What did I learn</h4>
                     </div>
                     <div className="col-md-12 col-lg-6">

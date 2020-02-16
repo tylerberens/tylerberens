@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Caveat|Montserrat:500,600,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Caveat|Montserrat:300,400,500,600,700,900&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -20,12 +20,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.btn:focus{
+  outline:none;
+  box-shadow:none;
+}
+.btn-primary,
+.btn-primary:focus{
+  color: #a2a2a2;
+  background-color: transparent;
+  border:solid 3px #585858;
+  border-radius: 0px;
+}
+.btn-primary:hover,
+.btn-primary:active{
+    color: #fff !important;
+    background-color: transparent;
+    border-color: #00ff80 !important;
+}
+a, button{
+  touch-action: manipulation;
+}
 :root {
   --b: #00e5ff;
   --g: #00ff80;
   --y: #d6ff00;
   --r: #ff0000;
   --p: #ee00ff;
+  --dgr: #2a2a2a;
   --gr: #707070;
+  --lgr: #ccc;
   --w: #fff;
+  --bl: #111;
 }

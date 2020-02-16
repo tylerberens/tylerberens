@@ -1,4 +1,5 @@
 div#work {
+  background: #161616;
   h1 {
     font-size: 4.5em;
     font-weight: 700;
@@ -20,21 +21,22 @@ div#work {
 }
 #headerContainer {
   display: block;
-  height: 85vh;
+  height: 75vh;
+  position: relative;
   padding-top: 22vh;
 }
 #workHeader{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 85vh;
+  height: 75vh;
   background-image: url("./work.jpg");
   background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
 }
 #filter{
-  height: 85vh;
+  height: 75vh;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
@@ -75,54 +77,34 @@ div#sidelinks {
   margin-left:-35px;
 }
 
-@media (max-width: 762px){
-  a.line1{
-    background: var(--y);
-    display:block;
-    width:600px;
-    max-width: 85vw;
-    list-style:none;
-    padding:8px 70px;
-    margin-top: 50px;
-    color: rgba(0, 0, 0, 1) !important;
-    transform:rotate(-12deg);
-    transition: .2s ease;
-    -webkit-transition: .2s ease;
-  }
-  a.line2{
-    background: var(--y);
-    display:block;
-    width:425px;
-    max-width:65vw;
-    padding:8px 70px;
-    margin-top: 15px;
-    color: rgba(0, 0, 0, 0.5) !important;
-    transform:rotate(-12deg)
-  }
-}
 .chicken1{
   position: absolute;
-  z-index: -2;
-  margin-top: -150px;
+  z-index: 0;
   left: -25px;
 }
 .chicken2{
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   left: -25px;
+  opacity: .3;
 }
 #templates{
   display: block;
-  margin-top: 20vh;
+  overflow: hidden;
+  margin-top: 5vh;
 }
 #work h3{
   color: var(--g);
+  font-size: 3rem;
+  font-weight:600;
   margin-top:75px;
   margin-bottom:30px;
 }
 #work h4{
   color: var(--gr);
-  font-size:16px;
+  font-size:1.3rem;
+  font-weight: 300;
+  text-shadow: 0px 1px 4px #090909;
   margin-top:15px;
 }
 .card1{
@@ -148,10 +130,205 @@ div#sidelinks {
   margin-left: 150px;
   margin-top: 150px;
 }
-.cards{
-  min-height:600px;
-}
 #bottomLayer{
   position:absolute;
-  bottom: 15vh !important;
+  bottom: 0;
+  left: -25px;
+  z-index: 1;
+}
+#cardButtons{
+  margin-top:25px;
+}
+#cardButtons .btn-primary{
+  max-width: 250px;
+  margin-left:auto;
+}
+.blank-iphone{
+  width:375px;
+  height:812px;
+  position:absolute;
+  top: -100px;
+  left: 60px;
+  max-width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  background:url("./ip_blank.png");
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  /* increase X: flatter */
+  transform: perspective(10000px) rotateY(25deg) rotateX(52deg) rotateZ(-25deg) scale(0.6) translate(150px, 30px);
+  border-radius: 41px;
+  box-shadow:
+    -10px 3px 3px 1px #FF0000,
+     -1px 1px 0px #FF0000,
+    -2px 2px 0px #FF0000,
+    -3px 3px 0px #FF0000,
+    -4px 4px 0px #FF0000,
+    -5px 5px 0px #FF0000,
+    -6px 6px 0px #FF0000,
+    -7px 7px 0px #FF0000,
+    -8px 8px 0px #FF0000,
+    -9px 9px 0px #FF0000,
+    -10px 10px 0px #FF0000,
+    -11px 11px 0px #FF0000,
+    -12px 12px 0px #bd0606,
+    -13px 13px 0px #bd0606,
+    -14px 14px 0px #bd0606,
+    -15px 15px 0px #bd0606,
+    -16px 16px 0px #bd0606,
+    -17px 17px 0px #bd0606,
+    -18px 18px 0px #a50606,
+    -19px 19px 0px #a50606,
+    -20px 20px 0px #a50606,
+    -21px 21px 0px #a50606,
+    -22px 22px 0px #a50606,
+    -23px 23px 0px #a50606,
+    -24px 24px 0px #a50606,
+    -25px 25px 0px #710404,
+    -26px 26px 0px #710404,
+    -40px 40px 40px rgba(39, 39, 39, 0.6);
+}
+.hover2{
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: .3s;
+}
+.iphone{
+  width:375px;
+  height:812px;
+  margin-top: -175px;
+  max-width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  background:url("./ip_cwc.png");
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+  animation-name: cycle;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  /* increase X: flatter */
+  transform: perspective(10000px) rotateY(25deg) rotateX(50deg) rotateZ(-25deg) scale(.6) translate(150px, 30px);
+  border-radius: 41px;
+  box-shadow:
+    -10px 3px 3px 1px #2b2b2b,
+     -1px 1px 0px #2b2b2b,
+    -2px 2px 0px #2b2b2b,
+    -3px 3px 0px #2b2b2b,
+    -4px 4px 0px #2b2b2b,
+    -5px 5px 0px #2b2b2b,
+    -6px 6px 0px #2b2b2b,
+    -7px 7px 0px #2b2b2b,
+    -8px 8px 0px #2b2b2b,
+    -9px 9px 0px #272727,
+    -10px 10px 0px #272727,
+    -11px 11px 0px #272727,
+    -12px 12px 0px #272727,
+    -13px 13px 0px #272727,
+    -14px 14px 0px #272727,
+    -15px 15px 0px #272727,
+    -16px 16px 0px #171717,
+    -17px 17px 0px #272727,
+    -18px 18px 0px #272727,
+    -19px 19px 0px #171717,
+    -20px 20px 0px #171717,
+    -21px 21px 0px #171717,
+    -22px 22px 0px #171717,
+    -23px 23px 0px #171717,
+    -24px 24px 0px #171717,
+    -25px 25px 0px #171717,
+    -26px 26px 0px #171717,
+    -27px 27px 0px #050505,
+    -28px 28px 0px #050505,
+    -40px 40px 40px rgba(39, 39, 39, 0.6);
+}
+.hover{
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce{
+  0%   {transform: translateY(-30px)}
+  25%   {transform: translateY(0px)}
+  100%   {transform: translateY(-30px)}
+}
+@keyframes cycle {
+  25%   {
+    background:url("./ip_tlc.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+  50%  {
+    background:url("./ip_over.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+  75%  {
+    background:url("./ip_lr.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+  100% {
+    background:url("./ip_cwc.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+}
+
+
+
+@media (max-width: 762px){
+  a.line1{
+    background: var(--y);
+    display:block;
+    width:600px;
+    max-width: 85vw;
+    list-style:none;
+    padding:8px 70px;
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 1) !important;
+    transform:rotate(-12deg);
+    transition: .2s ease;
+    -webkit-transition: .2s ease;
+  }
+  a.line2{
+    background: var(--y);
+    display:block;
+    width:425px;
+    max-width:65vw;
+    padding:8px 70px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.5) !important;
+    transform:rotate(-12deg)
+  }
+  .iphone{
+    transform: perspective(10000px) rotateY(25deg) rotateX(50deg) rotateZ(-25deg) scale(.4) translate(150px, 30px);
+    margin-right:auto;
+    margin-left: -45px;
+    margin-top: -100px;
+    top:0;
+  }
+  .blank-iphone{
+    transform: perspective(10000px) rotateY(25deg) rotateX(50deg) rotateZ(-25deg) scale(0.4) translate(150px, 0px);
+    margin-right:auto;
+    margin-left: -45px;
+    left: 0;
+    margin-top:-50px;
+    top:0;
+  }
+  .match{
+    margin-top:50px;
+  }
+  .hover{
+    height: 450px;
+  }
+  .cards {
+    margin-top: -150px;
+}
 }

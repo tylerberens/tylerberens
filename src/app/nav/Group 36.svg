@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="187" height="89.532" viewBox="0 0 187 89.532">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #fff;
+        stroke-width: 3px;
+        font-size: 56px;
+        font-family: AdobeHandwriting-Frank, Adobe Handwriting Frank;
+      }
+
+      .cls-2 {
+        fill: #00ff80;
+      }
+
+      .cls-3 {
+        fill: #707070;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        fill: #00e5ff;
+      }
+    </style>
+  </defs>
+  <g id="Group_36" data-name="Group 36" transform="translate(0 3)">
+    <text id="tyler" class="cls-1" transform="translate(37 57)"><tspan x="0" y="0">tyler</tspan></text>
+    <path id="Polygon_1" data-name="Polygon 1" class="cls-2" d="M21.5,0,43,37H0Z" transform="translate(0 66) rotate(-90)"/>
+    <path id="Path_33" data-name="Path 33" class="cls-3" d="M4185.7,145.91c-4.241,9.638,6.939,9.252,6.939,9.252l29.791-73.942s-5.889-9.328-8.2-4.7S4189.937,136.272,4185.7,145.91Z" transform="translate(-4061.113 -68.632)"/>
+    <g id="Polygon_2" data-name="Polygon 2" class="cls-4" transform="translate(187 23) rotate(90)">
+      <path class="cls-5" d="M21.5,0,43,37H0Z"/>
+      <path class="cls-6" d="M 21.5 11.9422664642334 L 10.42591094970703 31 L 32.57408905029297 31 L 21.5 11.9422664642334 M 21.5 0 L 43 37 L 0 37 L 21.5 0 Z"/>
+    </g>
+  </g>
+</svg>

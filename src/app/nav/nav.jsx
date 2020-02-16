@@ -8,12 +8,19 @@ export class nav extends Component {
     super(props);
     this.state = {
       x: false,
-      top: true,
+      top: "top p-4",
+      side: true
     };
 
     this.toggleNavClick = this.toggleNavClick.bind(this);
+    this.toggleNavSide = this.toggleNavSide.bind(this);
   }
-
+  toggleNavSide() {
+    this.setState(() => ({
+      side: !this.state.side,
+      x: !this.state.x
+    }));
+  }
   toggleNavClick() {
     this.setState(() => ({
       x: !this.state.x
@@ -26,26 +33,23 @@ export class nav extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
   handleScroll = () => {
-    if ((window.scrollY = 0)) {
-      this.setState({ top: !this.state.top});
+    if ((document.documentElement.scrollTop > 0)) {
+      this.setState({ top: "fixed p-1"});
     }
-  };
-  scrollTop() {
-    var scrollPos = window.scrollY;
-    if(scrollPos === 0){
-      return "Top";
+    else{
+      this.setState({ top: "top p-4"});
     }
   };
   render() {
     return (
       <nav
         id="nav"
-        className={`navbar navbar-dark navbar-expand-lg offset-xl-1 col-xl-10 p-4 ${scrollTop()} `} role="navigation">
-        <div className="container-fluid">
+        className={`navbar navbar-dark navbar-expand-lg ${this.state.top} `} role="navigation">
+        <div className="container-fluid offset-xl-1 col-xl-10">
           <Link to="/" className="logo">
             <Logo />
           </Link>
-          <button className="navbar-toggler" onClick={this.toggleNavClick}>
+          <button className={`navbar-toggler navbar-toggler-${this.state.side}`} onClick={this.toggleNavClick}>
             <div />
             <div />
             <div />
@@ -75,6 +79,11 @@ export class nav extends Component {
                 <Link to="/about">About</Link>
               </li>
             </ul>
+            <button className={`navbar-toggler alternate navbar-toggler-${!this.state.side}`} onClick={this.toggleNavSide}>
+              <div />
+              <div />
+              <div />
+            </button>
           </div>
         </div>
       </nav>
