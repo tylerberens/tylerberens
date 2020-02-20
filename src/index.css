@@ -8,10 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #0a0a0a !important;
-}
-body, html, #root, .App{
-  overflow:auto;
   overflow-x: hidden !important;
+  overflow-y: auto;
+}
+html{
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  max-width:100%;
 }
 .c {
   font-family: "Caveat", cursive;

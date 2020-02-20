@@ -5,12 +5,15 @@ import Nav from "./app/nav/nav";
 import Work from "./app/work/work";
 import Blog from "./app/blog/blog";
 import Resume from "./app/resume/resume";
+import Footer from "./app/footer/footer";
+import ScrollToTop from "./app/components/scrollTop";
 //page router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Nav />
         <Switch>
@@ -19,6 +22,7 @@ function App() {
           <Route path="/blog" component={Blog} />
           <Route path="/resume" component={Resume} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
