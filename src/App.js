@@ -15,14 +15,16 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/work" component={Work} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/resume" component={Resume} />
-        </Switch>
-        <Footer />
+        <div id="scroll-container">
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/work" component={Work} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/resume" component={Resume} />
+          </Switch>
+          <Footer />
+        </div>
       </div>
     </Router>
   );

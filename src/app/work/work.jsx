@@ -51,10 +51,10 @@ export class work extends Component {
                   </div>
                   <div className="match text-right col-md-12 col-lg-5">
                       <h3 className="c">Matching Templates</h3>
-                      <h4>Built ASP.NET templates to match existing websites</h4>
-                      <h4>Custom featured side navigation</h4>
-                      <h4>Redesigned UI of many tools</h4>
-                      <h4>Included multiple color themes</h4>
+                      <p>Integrated existing website into ASP.NET application</p>
+                      <p>Custom featured side navigation</p>
+                      <p>Redesigned UI of many tools</p>
+                      <p>Included multiple color themes</p>
                       {/* <div id="cardButtons">
                           <button className="btn btn-primary btn-block" onClick={() => this.setState({background: "cwc"})}>Central Wesleyan Church</button>
                           <button className="btn btn-primary btn-block" onClick={() => this.setState({background: "tlc"})}>The Local Church</button>
@@ -73,7 +73,7 @@ export class work extends Component {
                     </div> */}
                     <div className="text-left col-md-12 col-lg-6">
                       <h3 className="c">Next Project...</h3>
-                      <h4>Tell me about your great idea!</h4>
+                      <p>Tell me about your great idea!</p>
                     </div>
                     <div className="col-md-12 col-lg-6">
 

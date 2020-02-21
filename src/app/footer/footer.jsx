@@ -27,8 +27,8 @@ export default class footer extends Component {
                     <svg xmlns="http://www.w3.org/2000/svg" width="110vw" viewBox="0 0 2088.697 285.462">
                         <defs>
                             <linearGradient id="linear-gradient2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                            <stop offset="0" stop-color="#040404"/>
-                            <stop offset="1" stop-color="#0a0a0a"/>
+                            <stop offset="0" stopColor="#040404"/>
+                            <stop offset="1" stopColor="#0a0a0a"/>
                             </linearGradient>
                         </defs>
                         <path id="Path_19" data-name="Path 19" d="M3697.6,1146.328c-388.045-48.759-449.286,94.657-850.768,86.4s-534.912-164.306-755.159-119.441l-36.4,277.374h2088.7S4085.642,1195.086,3697.6,1146.328Z" transform="translate(-2055.271 -1105.195)" fill="url(#linear-gradient2)"/>
@@ -40,24 +40,21 @@ export default class footer extends Component {
                         <div className="col-xs-12 col-md-7 m-800">
                             <div id="contact" class="row">
                                 <div className="input-group col-xs-12 col-md-6">
-                                    <label className="input-group-addon" for="name">full name</label>
+                                    <label className="input-group-addon" htmlFor="name">full name</label>
                                     <input type="text" id="name" />
                                 </div>
                                 <div className="input-group col-xs-12 col-md-6">
-                                    <label className="input-group-addon" for="name">email</label>
+                                    <label className="input-group-addon" htmlFor="name">email</label>
                                     <input type="email" id="email" />
                                 </div>
                                 <div className="input-group col-12">
-                                    <label className="input-group-addon" for="msg">message</label>
+                                    <label className="input-group-addon" htmlFor="msg">message</label>
                                     <textarea type="text" id="msg" />
                                 </div>
                             </div>
                         </div>
                         <div className="col-xs-12 offset-md-1 col-md-3">
                             <ul id="footerNav">
-                                <li className="footer-item">
-                                    <Link to="/resume" onClick={this.toggleNavClick}>Home</Link>
-                                </li>
                                 <li className="footer-item">
                                     <Link to="/resume" onClick={this.toggleNavClick}>Resume</Link>
                                 </li>

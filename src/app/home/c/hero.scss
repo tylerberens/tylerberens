@@ -1,0 +1,83 @@
+#scrollDown .arrow{
+    max-width:150px;
+    padding-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+#scrollDown span{
+    color: var(--y);
+    font-size: 1.3em;
+    text-transform: lowercase;
+    font-weight: 300;
+}
+#scrollDown .arrow .center{
+    width:28px;
+    height:100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#scrollDown .chevron {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease infinite;
+  }
+  
+  #scrollDown .chevron:first-child {
+    animation: move 3s ease 1s infinite;
+  }
+  
+  #scrollDown .chevron:nth-child(2) {
+    animation: move 3s ease 2s infinite;
+  }
+  #scrollDown .chevron:nth-child(3) {
+    animation: move 3s ease 2s infinite;
+  }
+  #scrollDown .chevron:before,
+  #scrollDown .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: var(--w);
+  }
+  #scrollDown .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  #scrollDown .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: .25;
+  
+    }
+    33% {
+      opacity: .25;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }

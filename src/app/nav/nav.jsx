@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./nav.scss";
 import { Link } from "react-router-dom";
 import Logo from "./logo";
+import Cookies from "universal-cookie";
 
 export class nav extends Component {
   constructor(props) {
@@ -14,20 +15,69 @@ export class nav extends Component {
 
     this.toggleNavClick = this.toggleNavClick.bind(this);
     this.toggleNavSide = this.toggleNavSide.bind(this);
+    this.toggleNavLogoClick = this.toggleNavLogoClick.bind(this);
   }
   toggleNavSide() {
+    //set state for switching which side the mobile navigation is on
     this.setState(() => ({
       side: !this.state.side,
       x: !this.state.x
     }));
+
+    //set local cookie to keep which side the users navigation toggle is on
+    const cookies = new Cookies();
+    var oneYearFromNow = new Date();
+    oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+    cookies.set("nav", !this.state.side, {
+      path: "/",
+      expires: oneYearFromNow
+    });
+
+    //Append fixed body to avoid scrolling when navigation is open
+    var root = document.getElementById("scroll-container");
+    if(root.hasAttribute("class", "fixed")){
+      root.removeAttribute("class");
+    }
+    else{
+      root.setAttribute("class", "fixed");
+    }
+  }
+  toggleNavLogoClick(){
+    if(this.state.x === true){
+      this.setState(() => ({
+        x: !this.state.x
+      }));
+    }
+    var root = document.getElementById("scroll-container");
+    if(root.hasAttribute("class", "fixed")){
+      root.removeAttribute("class");
+    }
+    else{
+      root.setAttribute("class", "fixed");
+    }
   }
   toggleNavClick() {
     this.setState(() => ({
       x: !this.state.x
     }));
+    var root = document.getElementById("scroll-container");
+    if(root.hasAttribute("class", "fixed")){
+      root.removeAttribute("class");
+    }
+    else{
+      root.setAttribute("class", "fixed");
+    }
   }
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    
+    //load cookies
+    const cookies = new Cookies();
+    if(cookies.get("nav") === "false"){
+      this.setState(() => ({
+        side: false
+      }));
+    }
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -45,8 +95,8 @@ export class nav extends Component {
       <nav
         id="nav"
         className={`navbar navbar-dark navbar-expand-lg ${this.state.top} `} role="navigation">
-        <div className="container-fluid offset-xl-1 col-xl-10">
-          <Link to="/" className="logo">
+        <div className="container">
+          <Link to="/" className="logo" onClick={this.toggleNavLogoClick}>
             <Logo />
           </Link>
           <button className={`navbar-toggler navbar-toggler-${this.state.side}`} onClick={this.toggleNavClick}>

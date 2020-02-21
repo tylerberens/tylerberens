@@ -4,6 +4,7 @@ import Layer2 from "../svg/layer2";
 import Layer3 from "../svg/layer3";
 import Layer4 from "../svg/layer4";
 import { Link } from "react-router-dom";
+import './hero.scss';
 
 export class hero extends Component {
   render() {
@@ -18,8 +19,16 @@ export class hero extends Component {
                 see my work
               </Link>
             </div>
-            <div className="col-sm-12 col-md-6">
-              <h3 className="c fix">full-stack developer</h3>
+            <div id="scrollDown" className="col-sm-12 col-md-6">
+              <div className="arrow">
+                <span>Scroll down</span>
+                <div className="center">
+                  <div className="chevron"></div>
+                  <div className="chevron"></div>
+                  <div className="chevron"></div>
+                  <div className="chevron"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
