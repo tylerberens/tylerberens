@@ -8,17 +8,17 @@ import Resume from "./app/resume/resume";
 import Footer from "./app/footer/footer";
 import ScrollToTop from "./app/components/scrollTop";
 //page router
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
+    <HashRouter>
+      <ScrollToTop basename='/' />
       <div className="App">
         <div id="scroll-container">
           <Nav />
           <Switch>
-            <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Home} />
             <Route path="/work" component={Work} />
             <Route path="/blog" component={Blog} />
             <Route path="/resume" component={Resume} />
@@ -26,7 +26,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
