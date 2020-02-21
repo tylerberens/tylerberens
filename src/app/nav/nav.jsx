@@ -96,7 +96,7 @@ export class nav extends Component {
         id="nav"
         className={`navbar navbar-dark navbar-expand-lg ${this.state.top} `} role="navigation">
         <div className="container">
-          <Link to="/" className="logo" onClick={this.toggleNavLogoClick}>
+          <Link to="/home" className="logo" onClick={this.toggleNavLogoClick}>
             <Logo />
           </Link>
           <button className={`navbar-toggler navbar-toggler-${this.state.side}`} onClick={this.toggleNavClick}>
