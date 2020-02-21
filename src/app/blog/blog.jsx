@@ -13,7 +13,7 @@ export class blog extends Component {
             <Link to="/" className="line1">
                     <li>Home</li>
             </Link>
-            <a className="line2">Blog</a>
+            <li className="line2">Blog</li>
           </div>
           <div className="container-fluid">
             <div className="row">

@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import './footer.scss';
 
@@ -38,7 +38,7 @@ export default class footer extends Component {
                     <div className="row">
                         <h3>lets talk</h3>
                         <div className="col-xs-12 col-md-7 m-800">
-                            <div id="contact" class="row">
+                            <div id="contact" className="row">
                                 <div className="input-group col-xs-12 col-md-6">
                                     <label className="input-group-addon" htmlFor="name">full name</label>
                                     <input type="text" id="name" />
@@ -65,7 +65,7 @@ export default class footer extends Component {
                                     <Link to="/blog">Blog</Link>
                                 </li>
                                 <li className="footer-item" onClick={this.toggleNavClick}>
-                                    <Link to="/about">Github</Link>
+                                    <Link to="/about">About</Link>
                                 </li>
                             </ul>
                         </div>

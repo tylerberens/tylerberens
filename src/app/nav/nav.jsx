@@ -126,7 +126,7 @@ export class nav extends Component {
                 <Link to="/blog">Blog</Link>
               </li>
               <li className="nav-item" onClick={this.toggleNavClick}>
-                <Link to="/about">Github</Link>
+                <Link to="/about">About</Link>
               </li>
             </ul>
             <button className={`navbar-toggler alternate navbar-toggler-${!this.state.side}`} onClick={this.toggleNavSide}>

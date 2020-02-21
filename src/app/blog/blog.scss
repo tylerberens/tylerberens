@@ -49,7 +49,7 @@ div#blog {
     width:590px;
     background: #b3d503;
   }
-  a.line2{
+  li.line2{
     background: var(--y);
     display:block;
     width:425px;
@@ -80,7 +80,7 @@ div#blog {
       transition: .2s ease;
       -webkit-transition: .2s ease;
     }
-    a.line2{
+    li.line2{
       background: var(--y);
       display:block;
       width:425px;
